@@ -20,10 +20,10 @@ HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 COORD CursorPosition;
 int carPos = WIN_WIDTH/2;
 int score = 0;
-static const char car[4][4] = {' ', '±', '±', ' ',
-							  '±', '*', '*', '±', 
+static const char car[4][4] = {' ', 'Â±', 'Â±', ' ',
+							  'Â±', '*', '*', 'Â±', 
 							  ' ', '*', '*', ' ', 
-							  '±', '*', '*', '±',}; 
+							  'Â±', '*', '*', 'Â±',}; 
 							  				  
 
 
@@ -46,9 +46,9 @@ void easyMode::drawEnemy(int ind) {
 	
 	if(enemyFlag[ind] == true) {
 		gotoxy(enemyX[ind], enemyY[ind]);   cout << "|  |";
-		gotoxy(enemyX[ind], enemyY[ind]);   cout << "±**±";
+		gotoxy(enemyX[ind], enemyY[ind]);   cout << "Â±**Â±";
 		gotoxy(enemyX[ind], enemyY[ind]+1); cout << " ** ";
-		gotoxy(enemyX[ind], enemyY[ind]+2); cout << "±**±";
+		gotoxy(enemyX[ind], enemyY[ind]+2); cout << "Â±**Â±";
 		gotoxy(enemyX[ind], enemyY[ind]+3); cout << " ** ";
 	}
 
@@ -85,13 +85,13 @@ void easyMode::setcursor(bool visible, DWORD size) {
 void easyMode::drawBorder() {
 	for(int i = 0; i < SCREEN_HEIGHT; i++) {
 		for(int j = 0; j < 17; j++) {
-			gotoxy(0+j, i); cout << "±";
-			gotoxy(WIN_WIDTH-j, i); cout << "±";
+			gotoxy(0+j, i); cout << "Â±";
+			gotoxy(WIN_WIDTH-j, i); cout << "Â±";
 		}
 	}
 	
 	for(int i = 0; i < SCREEN_HEIGHT; i++) {
-		gotoxy(SCREEN_WIDTH, i); cout << "±";
+		gotoxy(SCREEN_WIDTH, i); cout << "Â±";
 	}
 		
 }
